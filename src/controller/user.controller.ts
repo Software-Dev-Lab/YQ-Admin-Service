@@ -28,6 +28,7 @@ class UserController {
       pageNo: Joi.number().required(),
       deptId: Joi.number().empty(1),
     })
+
     try {
       // 验证必要参数
       await schema.validateAsync(searchParams)

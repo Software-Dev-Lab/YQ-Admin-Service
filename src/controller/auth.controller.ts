@@ -16,16 +16,11 @@ class AuthController {
     const { expires7d } = ctx.request.body as LoginParams
     // token 有效期
     const expires = expires7d ? '7d' : '24h'
-    let token = ''
 
-    try {
-      token = jwt.sign({ id, username }, PRIVATE_KEY, {
-        expiresIn: expires,
-        algorithm: 'RS256',
-      })
-    } catch (error) {
-      console.log(error)
-    }
+    const token = jwt.sign({ id, username }, PRIVATE_KEY, {
+      expiresIn: expires,
+      algorithm: 'RS256',
+    })
 
     ctx.body = {
       code: 200,
