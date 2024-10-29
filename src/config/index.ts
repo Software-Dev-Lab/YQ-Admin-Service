@@ -38,3 +38,7 @@ export const TEST_CONFIG = {
   password: process.env.TEST_PASSWORD as string,
   name: process.env.TEST_NAME as string,
 }
+
+export const ZHIPU_CONFIG = {
+  apiKey: '9d700a70f0208b56cb0a0664660af421.gApGtUezofH3mLJ7',
+}

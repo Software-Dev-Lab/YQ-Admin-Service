@@ -5,7 +5,7 @@
  * @LastEditTime: 2024-10
  * @Description:
  */
-import { Context } from 'koa'
+import type { Context } from 'koa'
 import jwt from 'jsonwebtoken'
 import { PRIVATE_KEY } from '../config'
 import { LoginParams } from '../types'

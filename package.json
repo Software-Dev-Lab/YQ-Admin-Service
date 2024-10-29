@@ -40,7 +40,8 @@
     "koa2-cors": "^2.0.6",
     "mysql2": "^3.10.0",
     "nodemon": "^3.1.7",
-    "sequelize": "^6.37.3"
+    "sequelize": "^6.37.3",
+    "zhipuai-sdk-nodejs-v4": "^0.1.12"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
