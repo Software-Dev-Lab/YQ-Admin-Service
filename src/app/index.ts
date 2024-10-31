@@ -9,9 +9,7 @@ import Koa from 'koa'
 import cors from 'koa2-cors'
 import { router } from '../router'
 import { corsHandler } from './cors'
-import swagger from '../config/swagger'
 import bodyParser from 'koa-bodyparser'
-import { koaSwagger } from 'koa2-swagger-ui'
 import { errorHandler } from './error-handler'
 
 // import synchonize from '../models/sync'
@@ -28,16 +26,6 @@ app.use(cors(corsHandler))
 app.on('error', errorHandler)
 
 // swagger 配置
-app.use(swagger.routes())
-app.use(swagger.allowedMethods())
-app.use(
-  koaSwagger({
-    routePrefix: '/service-docs',
-    swaggerOptions: {
-      url: '/swagger.json',
-    },
-  })
-)
 
 // 导入路由
 app.use(router.routes())
