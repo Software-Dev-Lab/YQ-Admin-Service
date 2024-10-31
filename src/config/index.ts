@@ -40,5 +40,6 @@ export const TEST_CONFIG = {
 }
 
 export const ZHIPU_CONFIG = {
-  apiKey: '9d700a70f0208b56cb0a0664660af421.gApGtUezofH3mLJ7',
+  apiKey: '02b33b1d0c2bf2ac45079aad13847ce2.SljQJ9lwrdacPg49',
+  // apiKey: '17f18b17665fc4dccbcda563d469bfb7.CxjajdKGsUkk9CHl',
 }

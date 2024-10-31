@@ -23,15 +23,6 @@ class AisideController {
     //     videoUrlList: [],
     //     fileContentList: [],
     //   },
-    //   {
-    //     role: 'assistant',
-    //     content: '你好👋！很高兴见到你，有什么问题我可以帮您解答的吗？',
-    //   },
-    //   {
-    //     role: 'user',
-    //     content: '你是',
-    //     fileContentList: [],
-    //   },
     // ] as any
     const data = await ai.createCompletions({
       model: 'glm-4-0520',
@@ -47,6 +38,7 @@ class AisideController {
         },
       ],
     })
+
     ctx.status = 200
     // 编译异步可迭代对象返回给前端
     for await (const buffer of data as any) {
