@@ -1,9 +1,9 @@
 import menuModel from './menu.model'
 import roleModel from './role.model'
 import userModel from './user.model'
-import departmentModel from './department.model'
 import roleMenuModel from './roleMenu.model'
 import userRoleModel from './userRole.model'
+import departmentModel from './department.model'
 
 roleModel.belongsToMany(menuModel, {
   through: roleMenuModel,
