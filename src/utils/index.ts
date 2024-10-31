@@ -1,5 +1,5 @@
-import { Menu, DepartmentList } from '../types'
 import bcrypt from 'bcrypt'
+import type { Menu, DepartmentList } from '../types'
 
 /**
  * @description: 密码加密
@@ -44,6 +44,7 @@ export const formatMenus = (menus: any[]) => {
   // 将排序好的所有菜单根据 parentId 转为树形菜单
   return buildTreeMenu(menuList)
 }
+
 /**
  * 构建树形菜单
  * @param menus Menu[] 平铺菜单

@@ -1,3 +1,10 @@
+/*
+ * @Author: ZRMYDYCG
+ * @Date: 2024-10
+ * @LastEditors: ZRMYDYCG
+ * @LastEditTime: 2024-10
+ * @Description:
+ */
 import type { Context } from 'koa'
 import { ZhipuAI } from 'zhipuai-sdk-nodejs-v4'
 import { ZHIPU_CONFIG } from '../config/'

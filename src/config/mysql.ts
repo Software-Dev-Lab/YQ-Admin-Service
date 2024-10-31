@@ -6,7 +6,6 @@
  * @Description:
  */
 import { Sequelize } from 'sequelize'
-
 import { MYSQL_CONFIG } from '../config'
 
 const sequelize = new Sequelize(
@@ -33,7 +32,9 @@ const sequelize = new Sequelize(
   }
 )
 
-/** 连接数据库 */
+/**
+ * 连接数据库
+ */
 export const connectMysql = async () => {
   const msg = (flag: boolean) =>
     `连接${MYSQL_CONFIG.host}:${MYSQL_CONFIG.port}服务器的mysql数据库${
