@@ -5,6 +5,7 @@ import userRouter from './user.router'
 import roleRouter from './role.router'
 import menuRouter from './menu.router'
 import asideRouter from './aiside.router'
+import uploadRouter from './upload.router'
 import departmentRouter from './department.router'
 
 // 路由
@@ -15,4 +16,5 @@ router.use(userRouter.routes())
 router.use(roleRouter.routes())
 router.use(menuRouter.routes())
 router.use(asideRouter.routes())
+router.use(uploadRouter.routes())
 router.use(departmentRouter.routes())

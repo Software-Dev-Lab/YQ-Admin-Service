@@ -15,7 +15,7 @@ import bodyParser from 'koa-bodyparser'
 // 引入错误处理中间件
 import { errorHandler } from './error-handler'
 // 引入静态资源托管
-import koaStatic from 'koa-static'
+import serveStatic from 'koa-static'
 import path from 'path'
 
 // import synchonize from '../models/sync'
@@ -23,13 +23,14 @@ import path from 'path'
 
 const app = new Koa()
 
-// 静态资源托管
-app.use(koaStatic(path.join(__dirname, '../public')))
-
 // ctx.body
 app.use(bodyParser())
 
+// cors
 app.use(cors(corsHandler))
+
+// 静态资源托管
+app.use(serveStatic('../public/uploads'))
 
 // errorHandler
 app.on('error', errorHandler)

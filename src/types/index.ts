@@ -111,3 +111,12 @@ export interface DeptParams {
 export interface UpdateDeptParams extends DeptParams {
   id: number
 }
+
+// 拓展http.IncomingMessage接口
+declare module 'http' {
+  interface IncomingMessage {
+    file: {
+      filename: string
+    }
+  }
+}
