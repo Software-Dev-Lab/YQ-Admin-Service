@@ -12,7 +12,7 @@ import upload from '../middleware/upload.middleware'
 const uploadRouter = new Router({ prefix: '/upload' })
 
 /**
- * 单文件上传
+ * 文件上传
  */
 uploadRouter.post('/single', upload.single('file'), async (ctx, next) => {
   // 图片地址拼接
@@ -23,7 +23,4 @@ uploadRouter.post('/single', upload.single('file'), async (ctx, next) => {
   }
 })
 
-/**
- * 多文件上传
- */
 export default uploadRouter

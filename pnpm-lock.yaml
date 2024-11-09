@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@types/socket.io':
+        specifier: ^3.0.2
+        version: 3.0.2
       bcrypt:
         specifier: ^5.1.1
         version: 5.1.1
@@ -53,6 +56,9 @@ importers:
       sequelize:
         specifier: ^6.37.3
         version: 6.37.5(mysql2@3.11.3)
+      socket.io:
+        specifier: ^4.8.1
+        version: 4.8.1
       swagger-jsdoc:
         specifier: ^6.2.8
         version: 6.2.8(openapi-types@12.1.3)
@@ -220,6 +226,9 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
+  '@socket.io/component-emitter@3.1.2':
+    resolution: {integrity: sha512-9BCxFwvbGg/RsZK9tjXd8s4UcwR0MWeFQ1XEKIQVVvAGJyINdrqKMcTRyLoK8Rse1GjzLV9cwjWV1olXRWEXVA==}
+
   '@tsconfig/node10@1.0.11':
     resolution: {integrity: sha512-DcRjDCujK/kCk/cUe8Xz8ZSpm8mS3mNNpta+jGCA6USEDfktlNvm1+IuZ9eTcDbNk41BHwpHHeW+N1lKCz4zOw==}
 
@@ -247,8 +256,14 @@ packages:
   '@types/content-disposition@0.5.8':
     resolution: {integrity: sha512-QVSSvno3dE0MgO76pJhmv4Qyi/j0Yk9pBp0Y7TJ2Tlj+KCgJWY6qX7nnxCOLkZ3VYRSIk1WTxCvwUSdx6CCLdg==}
 
+  '@types/cookie@0.4.1':
+    resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
+
   '@types/cookies@0.9.0':
     resolution: {integrity: sha512-40Zk8qR147RABiQ7NQnBzWzDcjKzNrntB5BAmeGCb2p/MIyOE+4BVvc17wumsUqUw00bJYqoXFHYygQnEFh4/Q==}
+
+  '@types/cors@2.8.17':
+    resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
@@ -321,6 +336,10 @@ packages:
 
   '@types/serve-static@1.15.7':
     resolution: {integrity: sha512-W8Ym+h8nhuRwaKPaDw34QUkwsGi6Rc4yYqvKFo5rm2FUEhCFbzVWrxXUxuKK8TASjWsysJY0nsmNCGhCOIsrOw==}
+
+  '@types/socket.io@3.0.2':
+    resolution: {integrity: sha512-pu0sN9m5VjCxBZVK8hW37ZcMe8rjn4HHggBN5CbaRTvFwv5jOmuIRZEuddsBPa9Th0ts0SIo3Niukq+95cMBbQ==}
+    deprecated: This is a stub types definition. socket.io provides its own type definitions, so you do not need this installed.
 
   '@types/swagger-jsdoc@6.0.4':
     resolution: {integrity: sha512-W+Xw5epcOZrF/AooUM/PccNMSAFOKWZA5dasNyMujTwsBkU74njSJBpvCCJhHAJ95XRMzQrrW844Btu0uoetwQ==}
@@ -487,6 +506,10 @@ packages:
     resolution: {integrity: sha512-DSjtfjhAsHl9J4OJj7e4+toV2zqxJrGwVd3CLlsCp8QmicvOn7irG0Mb8brOc/nur3SdO8lIbNlY1s1ZDJdUKQ==}
     engines: {node: '>= 0.4.0'}
 
+  base64id@2.0.0:
+    resolution: {integrity: sha512-lGe34o6EHj9y3Kts9R4ZYs/Gr+6N7MCaMlIFA3F1R2O5/m7K06AxfSeO5530PEERE6/WyEg3lsuyw4GHlPZHog==}
+    engines: {node: ^4.5.0 || >= 5.9}
+
   bcrypt@5.1.1:
     resolution: {integrity: sha512-AGBHOG5hPYZ5Xl9KXzU5iKq9516yEmvCKDg3ecP5kX2aB6UqTeXZxk2ELnDgDm6BQSMlLt9rDB4LoSMx0rYwww==}
     engines: {node: '>= 10.0.0'}
@@ -620,6 +643,10 @@ packages:
     resolution: {integrity: sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA==}
     engines: {node: '>= 0.6'}
 
+  cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
+    engines: {node: '>= 0.6'}
+
   cookies@0.9.1:
     resolution: {integrity: sha512-TG2hpqe4ELx54QER/S3HQ9SRVnQnGBtKUz5bLQWtYAQ+o6GpgMs6sYUvaiJjVxb+UXwhRhAEP3m7LbsIZ77Hmw==}
     engines: {node: '>= 0.8'}
@@ -629,6 +656,10 @@ packages:
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+
+  cors@2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
@@ -749,8 +780,16 @@ packages:
   engine.io-parser@1.2.4:
     resolution: {integrity: sha512-qmLhc+CHGicieFJ3xZ3+pTpGLTopbEYAYASv1kX0CaHY7LxT5HVgGN0FKML2yq+G+mkknXAu6zYnZny2tjn5dg==}
 
+  engine.io-parser@5.2.3:
+    resolution: {integrity: sha512-HqD3yTBfnBxIrbnM1DoD6Pcq8NECnh8d4As1Qgh0z5Gg3jRRIqijury0CL3ghu/edArpUYiYqQiDUQBIs4np3Q==}
+    engines: {node: '>=10.0.0'}
+
   engine.io@1.6.8:
     resolution: {integrity: sha512-OsFYCtdM1MmWqtfbNN+tHkvhlC/AJovIIoTfUCwRvcaDPul2UlorjmTUdONf/YWO4ZWzOo1y4JxSDCU9r03WmQ==}
+
+  engine.io@6.6.2:
+    resolution: {integrity: sha512-gmNvsYi9C8iErnZdVcJnvCpSKbWTt1E8+JZo8b+daLninywUWi5NQ5STSHZ9rFjFO7imNcvb8Pc5pe/wMR5xEw==}
+    engines: {node: '>=10.2.0'}
 
   error-ex@1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
@@ -1693,6 +1732,9 @@ packages:
   socket.io-adapter@0.4.0:
     resolution: {integrity: sha512-nWW2nAX2FlxFr6GFPew2CKC3sDZkhWJEdw2GRml81L43ntCsD5ZiTNQcH0VAQzC/7gvckanNKelQ6eSIErSJCg==}
 
+  socket.io-adapter@2.5.5:
+    resolution: {integrity: sha512-eLDQas5dzPgOWCk9GuuJC2lBqItuhKI4uxGgo9aIV7MYbk2h9Q6uULEh8WBzThoI7l+qU9Ast9fVUmkqPP9wYg==}
+
   socket.io-client@1.4.5:
     resolution: {integrity: sha512-6dmsWzxxMll0Xczxr7etl5aQqsUxJ9TJ2Xvd94LsrJRYVZTpv8wscrMibPxPipj+KPwtkSjQDmP6YMCsk+B8rQ==}
 
@@ -1702,8 +1744,16 @@ packages:
   socket.io-parser@2.2.6:
     resolution: {integrity: sha512-uXTZmnj1jyTE57vgOlU0K5GKVFA80KB+q3kcExgFDtofI9l1ax5rS6LVG8aOLSK1Tb17jvF1pMVPQCYygD3tYQ==}
 
+  socket.io-parser@4.2.4:
+    resolution: {integrity: sha512-/GbIKmo8ioc+NIWIhwdecY0ge+qVBSMdgxGygevmdHj24bsfgtCmcUUcQ5ZzcylGFHsN3k4HB4Cgkl96KVnuew==}
+    engines: {node: '>=10.0.0'}
+
   socket.io@1.4.5:
     resolution: {integrity: sha512-Po2HZi77KrV35ftgDJc4ECF5WQy7nsjRMENIJ5Y0D65YMYSEik58N5xl0NIRKdORQ4kvNymFHgjmaVtDyanVeQ==}
+
+  socket.io@4.8.1:
+    resolution: {integrity: sha512-oZ7iUCxph8WYRHHcjBEc9unw3adt5CmSNlppj/5Q4k2RIrhl8Z5yY2Xr4j9zj0+wzVZ0bxmYoGSzKJnRl6A4yg==}
+    engines: {node: '>=10.2.0'}
 
   source-map@0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
@@ -1949,6 +1999,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.17.1:
+    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   xmlhttprequest-ssl@1.5.1:
     resolution: {integrity: sha512-yVeGn9mCv5868tlRfjBCcSSvdukMMItgB/B+1lxwweh5Az3hmGvr4ZTq6qXJ1ZSLMupsF4HBrb1d3E45t1KDYA==}
     engines: {node: '>=0.4.0'}
@@ -2113,6 +2175,8 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
+  '@socket.io/component-emitter@3.1.2': {}
+
   '@tsconfig/node10@1.0.11': {}
 
   '@tsconfig/node12@1.0.11': {}
@@ -2140,11 +2204,17 @@ snapshots:
 
   '@types/content-disposition@0.5.8': {}
 
+  '@types/cookie@0.4.1': {}
+
   '@types/cookies@0.9.0':
     dependencies:
       '@types/connect': 3.4.38
       '@types/express': 5.0.0
       '@types/keygrip': 1.0.6
+      '@types/node': 22.8.1
+
+  '@types/cors@2.8.17':
+    dependencies:
       '@types/node': 22.8.1
 
   '@types/debug@4.1.12':
@@ -2241,6 +2311,14 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/node': 22.8.1
       '@types/send': 0.17.4
+
+  '@types/socket.io@3.0.2':
+    dependencies:
+      socket.io: 4.8.1
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
 
   '@types/swagger-jsdoc@6.0.4': {}
 
@@ -2416,6 +2494,8 @@ snapshots:
 
   base64id@0.1.0: {}
 
+  base64id@2.0.0: {}
+
   bcrypt@5.1.1:
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11
@@ -2548,6 +2628,8 @@ snapshots:
 
   content-type@1.0.5: {}
 
+  cookie@0.7.2: {}
+
   cookies@0.9.1:
     dependencies:
       depd: 2.0.0
@@ -2556,6 +2638,11 @@ snapshots:
   copy-to@2.0.1: {}
 
   core-util-is@1.0.3: {}
+
+  cors@2.8.5:
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
 
   create-require@1.1.1: {}
 
@@ -2662,6 +2749,8 @@ snapshots:
       has-binary: 0.1.6
       utf8: 2.1.0
 
+  engine.io-parser@5.2.3: {}
+
   engine.io@1.6.8:
     dependencies:
       accepts: 1.1.4
@@ -2669,6 +2758,23 @@ snapshots:
       debug: 2.2.0
       engine.io-parser: 1.2.4
       ws: 1.0.1
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  engine.io@6.6.2:
+    dependencies:
+      '@types/cookie': 0.4.1
+      '@types/cors': 2.8.17
+      '@types/node': 22.8.1
+      accepts: 1.3.8
+      base64id: 2.0.0
+      cookie: 0.7.2
+      cors: 2.8.5
+      debug: 4.3.7(supports-color@5.5.0)
+      engine.io-parser: 5.2.3
+      ws: 8.17.1
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3654,6 +3760,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  socket.io-adapter@2.5.5:
+    dependencies:
+      debug: 4.3.7(supports-color@5.5.0)
+      ws: 8.17.1
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
   socket.io-client@1.4.5:
     dependencies:
       backo2: 1.0.2
@@ -3692,6 +3807,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  socket.io-parser@4.2.4:
+    dependencies:
+      '@socket.io/component-emitter': 3.1.2
+      debug: 4.3.7(supports-color@5.5.0)
+    transitivePeerDependencies:
+      - supports-color
+
   socket.io@1.4.5:
     dependencies:
       debug: 2.2.0
@@ -3700,6 +3822,20 @@ snapshots:
       socket.io-adapter: 0.4.0
       socket.io-client: 1.4.5
       socket.io-parser: 2.2.6
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+
+  socket.io@4.8.1:
+    dependencies:
+      accepts: 1.3.8
+      base64id: 2.0.0
+      cors: 2.8.5
+      debug: 4.3.7(supports-color@5.5.0)
+      engine.io: 6.6.2
+      socket.io-adapter: 2.5.5
+      socket.io-parser: 4.2.4
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -3914,6 +4050,8 @@ snapshots:
     dependencies:
       options: 0.0.6
       ultron: 1.0.2
+
+  ws@8.17.1: {}
 
   xmlhttprequest-ssl@1.5.1: {}
 
