@@ -38,13 +38,18 @@ async function runServer() {
        * 3. 监听用户给其它用户发送的消息, 保存到数据库
        * 4. 监听用户离线, 改变用户在线状态
        * 5. 监听系统的在线人数
-       * 6. 监听每一个用户接收的消息, 实时推送到客户端
+       * 6. 监听每一个用户接收的消息, 推送到客户端
        */
       io.on('connection', (socket) => {
         socket.on('signal', (data: any) => {
           // TODO: 监听用户给其它用户发送的消息, 保存到数据库
           console.log('客户端发送的内容：', data)
           chatService.send(data)
+        })
+        socket.on('notice', (data: any) => {
+          // TODO: 监听每一个用户接收的消息, 推送到客户端
+          console.log('推送的消息:', data)
+          socket.emit('getMessage', data)
         })
       })
     })
