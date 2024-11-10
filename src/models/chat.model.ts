@@ -9,13 +9,15 @@ const model = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    send_id: {
+    sendId: {
       type: DataTypes.BIGINT, // 发送人 id
       allowNull: false,
+      field: 'send_id',
     },
-    recipient_id: {
+    recipientId: {
       type: DataTypes.BIGINT, // 接收人 id
       allowNull: false,
+      field: 'recipient_id',
     },
     content: {
       type: DataTypes.TEXT('long'),
@@ -33,14 +35,15 @@ const model = sequelize.define(
       type: DataTypes.STRING(255),
       allowNull: false,
     },
-    create_at: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
+    createdAt: {
+      type: DataTypes.DATE,
+      field: 'created_at',
     },
-    is_read: {
+    isRead: {
       type: DataTypes.TINYINT,
       allowNull: false,
       defaultValue: 0, // 默认值为 0，表示未读
+      field: 'is_read',
     },
     avatar: {
       type: DataTypes.STRING(500),
@@ -49,6 +52,7 @@ const model = sequelize.define(
   },
   {
     freezeTableName: true,
+    timestamps: false,
   }
 )
 

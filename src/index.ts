@@ -44,10 +44,6 @@ async function runServer() {
           socket.emit('getMsg', '我是初始化3秒后的返回消息...')
         }, 3000)
       })
-      // app.listen(port, () => {
-      //   console.log(`服务器在${APP_HOST}:${APP_PORT}端口启动成功！`)
-      //   resolve('ok')
-      // })
     })
   } catch (error) {
     console.log(`项目启动失败:${error}`)

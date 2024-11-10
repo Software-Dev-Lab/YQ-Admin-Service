@@ -14,3 +14,5 @@ chatRouter.get('/all', chatController.getAllChatRecords)
  * 获取指定两个用户之间的聊天记录
  */
 chatRouter.post('/between', chatController.getChatRecordsBetween)
+
+export default chatRouter
