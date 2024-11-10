@@ -10,7 +10,16 @@ class ChatController {
       msg: '获取成功',
     }
   }
-  async getChatRecordsBetween() {}
+  async getChatRecordsBetween(ctx: Context) {
+    const { recipient_id, send_id } = ctx.request.body as any
+    const records = await ChatService.betweenChatRecords(recipient_id, send_id)
+
+    ctx.body = {
+      code: 200,
+      data: records,
+      msg: '获取成功',
+    }
+  }
 }
 
 export default new ChatController()
