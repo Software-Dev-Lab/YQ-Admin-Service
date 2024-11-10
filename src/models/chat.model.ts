@@ -10,11 +10,11 @@ const model = sequelize.define(
       autoIncrement: true,
     },
     send_id: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.BIGINT, // 发送人 id
       allowNull: false,
     },
     recipient_id: {
-      type: DataTypes.BIGINT,
+      type: DataTypes.BIGINT, // 接收人 id
       allowNull: false,
     },
     content: {
@@ -22,11 +22,11 @@ const model = sequelize.define(
       allowNull: false,
     },
     type: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, // 内容类型
       allowNull: false,
     },
     status: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, // 是否发送成功
       allowNull: false,
     },
     timestamp: {
