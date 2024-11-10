@@ -7,6 +7,8 @@ import app from './app'
 import { APP_PORT } from './config'
 import { connectMysql } from './config/mysql'
 
+import chatService from './service/chat.service'
+
 async function runServer() {
   const port = APP_PORT // 端口
   try {
@@ -29,20 +31,21 @@ async function runServer() {
         console.log(`应用运行在: http://127.0.0.1:${port}`)
       })
 
-      // 处理 Socket.IO 连接
+      // Socket.IO
+      /**
+       * 1. 监听用户上线, 改变用户在线状态
+       * 2. 监听用户点击某条消息, 改变消息的已读状态, 保存到数据库
+       * 3. 监听用户给其它用户发送的消息, 保存到数据库
+       * 4. 监听用户离线, 改变用户在线状态
+       * 5. 监听系统的在线人数
+       * 6. 监听每一个用户接收的消息, 实时推送到客户端
+       */
       io.on('connection', (socket) => {
-        console.log('初始化成功！可以绑定和触发事件了')
-
-        // 监听客户端发送的消息
-        socket.on('send', (data: string) => {
+        socket.on('signal', (data: any) => {
+          // TODO: 监听用户给其它用户发送的消息, 保存到数据库
           console.log('客户端发送的内容：', data)
-          socket.emit('getMsg', '我是返回的消息...')
+          chatService.send(data)
         })
-
-        // 3秒后发送初始化消息
-        setTimeout(() => {
-          socket.emit('getMsg', '我是初始化3秒后的返回消息...')
-        }, 3000)
       })
     })
   } catch (error) {
