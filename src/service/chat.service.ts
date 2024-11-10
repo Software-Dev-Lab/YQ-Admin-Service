@@ -28,6 +28,19 @@ class ChatService {
       console.log(error)
     }
   }
+  async send(data: any) {
+    try {
+      const res = await ChatModel.create({
+        ...data,
+        createdAt: new Date(),
+        timestamp: new Date().getTime(),
+        isRead: 0,
+        status: 1,
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 export default new ChatService()

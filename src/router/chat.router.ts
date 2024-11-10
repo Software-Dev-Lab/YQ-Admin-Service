@@ -15,4 +15,9 @@ chatRouter.get('/all', chatController.getAllChatRecords)
  */
 chatRouter.post('/between', chatController.getChatRecordsBetween)
 
+/**
+ * 发送聊天信息
+ */
+chatRouter.put('/send', chatController.sendChatMsg)
+
 export default chatRouter
